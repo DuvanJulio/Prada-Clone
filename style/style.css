@@ -19,7 +19,7 @@
     font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,bottom {
 
     font-family: 'GTA', sans-serif;
     font-weight: bold;
@@ -125,19 +125,20 @@ a, p, span, strong,b{
     
 }
 
-/* Estilo para el botón de cierre */
-.menu-nav linea{
-    height: 2px;
-    background-color: #333;
-    margin: 3px;
-    
-}
 
 /* Estilo para el botón de cierre */
 .menu-nav {
     display: none;
     flex-direction: column;
+    cursor: pointer;
     gap: 5px;
+    
+}
+/* Estilo para el botón de cierre */
+.menu-nav linea{
+    height: 2px;
+    background-color: #333;
+    margin: 3px;
     
 }
 
@@ -174,7 +175,12 @@ a, p, span, strong,b{
     background-color: #fff;
     position: fixed;
     top: 0;
+    display: none;
     
+}
+
+.sidebar.active{
+    display: block;
 }
 
 
@@ -264,6 +270,22 @@ a, p, span, strong,b{
 .icon-help img {
     width: 20.23px; /* Tamaño de los iconos */
     height: 20px;
+    
+}
+
+.close {
+    display: none;
+    padding: 0px 20px;
+    margin: -35px -40px 0px auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .close {
+        display: flex;
+    }
     
 }
 
